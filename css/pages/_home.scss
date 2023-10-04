@@ -1,0 +1,15 @@
+.home_page {
+	opacity: 0%;
+
+	animation: pageLoad 1s linear 0s forwards;
+}
+
+@keyframes pageLoad {
+	0% {
+		opacity: 0%;
+	}
+
+	100% {
+		opacity: 100%;
+	}
+}

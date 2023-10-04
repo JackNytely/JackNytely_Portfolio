@@ -1,0 +1,21 @@
+//Components
+@import "components/project_list";
+@import "components/project_card";
+
+//Pages
+@import "pages/index";
+@import "pages/home";
+@import "pages/code";
+
+//Setup the Default Body Styling
+body {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	height: 100vh;
+
+	background-color: #111111;
+	color: #ffffff;
+	font-family: "Segoe UI";
+	margin: 0;
+}

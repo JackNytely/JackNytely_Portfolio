@@ -1,0 +1,117 @@
+.project_card {
+	height: 30vh;
+	aspect-ratio: 2/3;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	margin: 0 8%;
+
+	.project_name {
+		width: 100%;
+		position: absolute;
+		bottom: -6vh;
+		margin: 0;
+		z-index: 10;
+		text-wrap: nowrap;
+		font-size: 3vh;
+		text-align: center;
+	}
+
+	.code_card,
+	.preview_card {
+		height: 30vh;
+		aspect-ratio: 2/3;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		border: #ffffff solid 0.25vh;
+		border-radius: 1vh;
+
+		transition: transform 0.2s linear, left 0.2s linear;
+		cursor: pointer;
+
+		.background_image {
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			border-radius: 1vh;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: left;
+				filter: blur(0.3vh);
+				transform: scale(1.1);
+			}
+		}
+		.card_title {
+			opacity: 0%;
+			position: absolute;
+			top: 0;
+			margin: 0;
+			font-size: 3vh;
+			transition: top 0.2s linear, opacity 0.3s linear;
+			z-index: -1;
+		}
+	}
+
+	.code_card {
+		left: -10%;
+
+		.background_image {
+			object-position: right;
+		}
+
+		.card_title {
+			color: #eb3232;
+		}
+	}
+
+	.preview_card {
+		left: 10%;
+
+		.card_title {
+			color: #2c64ff;
+		}
+	}
+}
+
+.project_card:hover {
+	.code_card,
+	.preview_card {
+		.card_title {
+			opacity: 100%;
+			top: -20%;
+			transition: top 0.2s linear, opacity 0.05s linear;
+		}
+	}
+
+	.code_card {
+		transform: rotate(-15deg);
+		left: -15%;
+
+		transition: transform 0.2s linear, left 0.2s linear;
+	}
+
+	.preview_card {
+		transform: rotate(15deg);
+		left: 30%;
+
+		transition: transform 0.2s linear, left 0.2s linear;
+	}
+
+	.code_card:hover {
+		border-color: #eb3232;
+		box-shadow: #eb3232b9 0px 0px 2vh;
+	}
+
+	.preview_card:hover {
+		border-color: #2c64ff;
+		box-shadow: #2c64ffb9 0px 0px 2vh;
+	}
+}
