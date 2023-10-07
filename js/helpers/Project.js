@@ -10,7 +10,7 @@ export class Project {
 	name;
 	codeImageURL;
 	previewImageURL;
-	sourceCode = new Map();
+	sourceCode;
 	codeURL;
 	previewURL;
 
@@ -19,7 +19,7 @@ export class Project {
 	 * @param {string} name The Name of the Project
 	 * @param {string} codeImageURL The URL to a Preview Image of the Project's Code
 	 * @param {string} previewImageURL The URL to a Preview Image of the Live Project (such as it's webpage)
-	 * @param {Array<Code_File>} sourceCode An Array of Source Code for the Project (as a Code_File type)
+	 * @param {Array<Code_File> | undefined} sourceCode An Array of Source Code for the Project (as a Code_File type)
 	 * @param {string} codeURL The URL to a Website where the Code can be Viewed (eg: github)
 	 * @param {string} previewURL The URL to a Website where the Functional Project can be showcased
 	 */

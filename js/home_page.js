@@ -1,5 +1,8 @@
 "use strict";
+
+/**Imports the Test Data (This will be used later to show code natively in the website) 
 import testData from "./test_data.js";
+*/
 
 //Imports
 import { Project } from "./helpers/Project.js";
@@ -18,7 +21,7 @@ const testProject1 = new Project(
 	"My Anime List",
 	"/assets/Code_Test.png",
 	"/assets/Preview_Test.png",
-	testData,
+	null,
 	"https://github.com/HyperionDev-SL23060008761/MyAnimeList",
 	"https://MyAnimeList.JackNytely.com"
 );
