@@ -1,9 +1,114 @@
 .home_page {
 	opacity: 0%;
-
 	animation: pageLoad 1s linear 0s forwards;
+	display: flex;
+	flex-direction: column;
+
+	.body_content {
+		width: 100vw;
+		height: 100vh;
+		overflow-x: hidden;
+		overflow-y: scroll;
+	}
+
+	.bio_section {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		img {
+			width: 200px;
+		}
+
+		.description {
+			color: #ff5d5d;
+			width: 60vw;
+			text-align: center;
+			font-weight: bold;
+			font-size: 24px;
+		}
+
+		.contact_details {
+			width: 50%;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			padding: 10px 0px;
+			border-width: 0px;
+			border-color: #ffffff20;
+			border-style: solid;
+			border-top-width: 1px;
+			border-bottom-width: 1px;
+
+			.phone {
+				color: #58ff53;
+			}
+
+			.email {
+				color: #ff7b53;
+			}
+
+			.linked_in {
+				color: #53acff;
+				cursor: pointer;
+			}
+
+			.discord {
+				color: #535eff;
+				cursor: pointer;
+			}
+
+			.linked_in:hover {
+				color: #53acff;
+				text-shadow: #53acff 0px 0px 15px;
+			}
+
+			.discord:hover {
+				color: #535eff;
+				text-shadow: #535eff 0px 0px 15px;
+			}
+		}
+	}
+
+	.projects_section {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		.section_title {
+			font-size: 50px;
+			font-family: monospace;
+			color: #ff64648f;
+			pointer-events: none;
+		}
+	}
 }
 
+//Scrollbar Width
+.home_page .body_content::-webkit-scrollbar {
+	width: 1px;
+}
+
+//Scrollbar Track
+.home_page .body_content::-webkit-scrollbar-track {
+	background: #f1f1f100;
+}
+
+//Scrollbar Handle
+.home_page .body_content::-webkit-scrollbar-thumb {
+	background: #ff5d5d;
+}
+
+//Scrollbar Hover
+.home_page .body_content::-webkit-scrollbar-thumb:hover {
+	background: #d44848;
+}
+
+//Page Load Animation
 @keyframes pageLoad {
 	0% {
 		opacity: 0%;

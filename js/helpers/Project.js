@@ -11,6 +11,7 @@ export class Project {
 	codeImageURL;
 	previewImageURL;
 	sourceCode = new Map();
+	codeURL;
 	previewURL;
 
 	/**
@@ -19,19 +20,18 @@ export class Project {
 	 * @param {string} codeImageURL The URL to a Preview Image of the Project's Code
 	 * @param {string} previewImageURL The URL to a Preview Image of the Live Project (such as it's webpage)
 	 * @param {Array<Code_File>} sourceCode An Array of Source Code for the Project (as a Code_File type)
+	 * @param {string} codeURL The URL to a Website where the Code can be Viewed (eg: github)
 	 * @param {string} previewURL The URL to a Website where the Functional Project can be showcased
 	 */
-	constructor(name, codeImageURL, previewImageURL, sourceCode, previewURL) {
+	constructor(name, codeImageURL, previewImageURL, sourceCode, codeURL, previewURL) {
 		//
-		console.log(name);
 		//Update the Public Properties
 		this.name = name;
 		this.codeImageURL = codeImageURL;
 		this.previewImageURL = previewImageURL;
 		this.sourceCode = sourceCode;
+		this.codeURL = codeURL;
 		this.previewURL = previewURL;
-
-		//Update the Private Properties
 	}
 
 	/**

@@ -19,6 +19,7 @@ const testProject1 = new Project(
 	"/assets/Code_Test.png",
 	"/assets/Preview_Test.png",
 	testData,
+	"https://github.com/HyperionDev-SL23060008761/MyAnimeList",
 	"https://MyAnimeList.JackNytely.com"
 );
 
@@ -65,7 +66,11 @@ function projectClickHandler(clickEvent) {
 	if (isPreviewCard && requestedProject.previewURL) location.href = requestedProject.previewURL;
 
 	//Check if the User Clicked on the Code Card
+	if (isCodeCard && requestedProject.codeURL) location.href = requestedProject.codeURL;
+
+	/* This will be added Later to have native ability to view code on the website itself
 	if (isCodeCard) sendToCodePage(requestedProject);
+	*/
 }
 
 /**
