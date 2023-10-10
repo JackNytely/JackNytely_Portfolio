@@ -42,6 +42,15 @@
 			border-top-width: 1px;
 			border-bottom-width: 1px;
 
+			.phone,
+			.email,
+			.linked_in,
+			.discord {
+				text-decoration: none;
+				text-shadow: 0px 0px 0px;
+				transition: text-shadow 0.5s linear;
+			}
+
 			.phone {
 				color: #58ff53;
 			}
@@ -56,23 +65,19 @@
 			}
 
 			.discord {
-				color: #535eff;
+				color: #896ffd;
 				cursor: pointer;
 			}
 
-			.linked_in:hover {
-				color: #53acff;
-				text-shadow: #53acff 0px 0px 15px;
-			}
-
+			.linked_in:hover,
 			.discord:hover {
-				color: #535eff;
-				text-shadow: #535eff 0px 0px 15px;
+				text-shadow: 0px 0px 15px;
+				transition: text-shadow 0.5s linear;
 			}
 		}
 	}
 
-	.projects_section {
+	.section {
 		height: 100%;
 		display: flex;
 		flex-direction: column;

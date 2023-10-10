@@ -1,0 +1,49 @@
+.skill_card {
+	height: 40vh;
+	aspect-ratio: 2/3;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+	box-shadow: -5px 5px 20px #000000;
+	border-radius: 0.5vh;
+	margin: 0% 10px;
+	cursor: pointer;
+
+	.skill_proficiency_section {
+		height: 2%;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: baseline;
+		align-items: center;
+		position: absolute;
+		bottom: 0;
+		z-index: 1;
+
+		.skill_proficiency {
+			height: 100%;
+			width: 20%;
+			background-color: #37ff7a;
+			margin: 0px 1%;
+			border-radius: 2px;
+			opacity: 0%;
+			transition: opacity 0.5s linear 0s;
+		}
+	}
+
+	.skill_image {
+		height: 97%;
+		position: absolute;
+	}
+}
+
+.skill_card:hover {
+	@for $current_proficiency from 1 through 5 {
+		.skill_proficiency:nth-child(#{$current_proficiency}) {
+			opacity: 100%;
+			transition: opacity 0.4s linear calc(0.1s * $current_proficiency);
+		}
+	}
+}

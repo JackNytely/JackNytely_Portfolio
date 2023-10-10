@@ -6,9 +6,35 @@ import testData from "./test_data.js";
 
 //Imports
 import { Project } from "./helpers/Project.js";
+import { Skill } from "./helpers/Skill.js";
+
+//Setup the Raw Projects
+const rawProjects = [
+	[
+		"My Anime List",
+		"/assets/Code_Test.png",
+		"/assets/Preview_Test.png",
+		null,
+		"https://github.com/HyperionDev-SL23060008761/MyAnimeList",
+		"https://MyAnimeList.JackNytely.com",
+	],
+];
+
+//Setup the Raw Skills
+const rawSkills = [
+	["NodeJS", 5, "/assets/skills/NodeJS.png"],
+	["TypeScript", 5, "/assets/skills/TypeScript.png"],
+	["JavaScript", 5, "/assets/skills/JavaScript.png"],
+	["HTML", 4, "/assets/skills/HTML.png"],
+	["CSS", 4, "/assets/skills/CSS.png"],
+	["SCSS", 3, "/assets/skills/SCSS.png"],
+	["MySQL", 3, "/assets/skills/MySQL.png"],
+	["MongoDB", 3, "/assets/skills/MongoDB.png"],
+];
 
 //Get the Required Elements
 const projectListElement = document.querySelector(".project_list");
+const skillsElement = document.querySelector(".skills");
 
 //Setup the Listeners
 projectListElement.addEventListener("click", projectClickHandler);
@@ -16,21 +42,34 @@ projectListElement.addEventListener("click", projectClickHandler);
 //Setup the Project List
 const projectList = new Map();
 
-//Setup the New Project
-const testProject1 = new Project(
-	"My Anime List",
-	"/assets/Code_Test.png",
-	"/assets/Preview_Test.png",
-	null,
-	"https://github.com/HyperionDev-SL23060008761/MyAnimeList",
-	"https://MyAnimeList.JackNytely.com"
-);
+//Setup the Skill List
+const skillList = new Map();
 
-//Open the Project Card in the Project List Element
-testProject1.openProjectCard(projectListElement);
+//Loop through the list of Raw Projects
+for (const projectData of rawProjects) {
+	//
+	//Setup the New Project
+	const newProject = new Project(...projectData);
 
-//Add the Project to the Project List
-projectList.set(testProject1.name, testProject1);
+	//Open the New project in the Project List Element
+	newProject.openProjectCard(projectListElement);
+
+	//Add the Project to the Project List
+	projectList.set(newProject.name, newProject);
+}
+
+//Loop through the list of Raw Skills
+for (const [skillName, skillProficiency, skillImageURL] of rawSkills) {
+	//
+	//Setup the New Skill
+	const newSkill = new Skill(skillName, skillProficiency, skillImageURL);
+
+	//Open the New Skill in the Skill List Element
+	newSkill.openSkillCard(skillsElement);
+
+	//Add the Skill to the Skill List
+	skillList.set(newSkill.name, newSkill);
+}
 
 /**
  * Handles Click Events for a Project

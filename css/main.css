@@ -80,8 +80,8 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  border: #ffffff solid 0.25vh;
-  border-radius: 1vh;
+  border: rgba(255, 255, 255, 0.8823529412) solid 0.25vh;
+  border-radius: 0.5vh;
   transition: transform 0.2s linear, left 0.2s linear;
   cursor: pointer;
 }
@@ -90,7 +90,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  border-radius: 1vh;
+  border-radius: 0.5vh;
 }
 .project_card .code_card .background_image img,
 .project_card .preview_card .background_image img {
@@ -114,7 +114,9 @@
   z-index: -1;
 }
 .project_card .code_card {
+  top: 0%;
   left: -10%;
+  box-shadow: -5px 5px 20px #000000;
 }
 .project_card .code_card .background_image {
   -o-object-position: right;
@@ -124,7 +126,9 @@
   color: #eb3232;
 }
 .project_card .preview_card {
+  top: -1%;
   left: 10%;
+  box-shadow: -5px 5px 20px #000000;
 }
 .project_card .preview_card .card_title {
   color: #2c64ff;
@@ -153,6 +157,100 @@
 .project_card:hover .preview_card:hover {
   border-color: #2c64ff;
   box-shadow: rgba(44, 100, 255, 0.7254901961) 0px 0px 2vh;
+}
+
+.skill_list {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  padding: 4% 0px;
+}
+.skill_list .skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-direction: row;
+  position: relative;
+  left: 0;
+}
+
+.skill_list::-webkit-scrollbar {
+  height: 5px;
+}
+
+.skill_list::-webkit-scrollbar-track {
+  background: rgba(241, 241, 241, 0);
+}
+
+.skill_list::-webkit-scrollbar-thumb {
+  background: #ff5d5d;
+}
+
+.skill_list::-webkit-scrollbar-thumb:hover {
+  background: #d44848;
+}
+
+.skill_card {
+  height: 40vh;
+  aspect-ratio: 2/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: -5px 5px 20px #000000;
+  border-radius: 0.5vh;
+  margin: 0% 10px;
+  cursor: pointer;
+}
+.skill_card .skill_proficiency_section {
+  height: 2%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+.skill_card .skill_proficiency_section .skill_proficiency {
+  height: 100%;
+  width: 20%;
+  background-color: #37ff7a;
+  margin: 0px 1%;
+  border-radius: 2px;
+  opacity: 0%;
+  transition: opacity 0.5s linear 0s;
+}
+.skill_card .skill_image {
+  height: 97%;
+  position: absolute;
+}
+
+.skill_card:hover .skill_proficiency:nth-child(1) {
+  opacity: 100%;
+  transition: opacity 0.4s linear 0.1s;
+}
+.skill_card:hover .skill_proficiency:nth-child(2) {
+  opacity: 100%;
+  transition: opacity 0.4s linear 0.2s;
+}
+.skill_card:hover .skill_proficiency:nth-child(3) {
+  opacity: 100%;
+  transition: opacity 0.4s linear 0.3s;
+}
+.skill_card:hover .skill_proficiency:nth-child(4) {
+  opacity: 100%;
+  transition: opacity 0.4s linear 0.4s;
+}
+.skill_card:hover .skill_proficiency:nth-child(5) {
+  opacity: 100%;
+  transition: opacity 0.4s linear 0.5s;
 }
 
 .content {
@@ -344,6 +442,14 @@
   border-top-width: 1px;
   border-bottom-width: 1px;
 }
+.home_page .bio_section .contact_details .phone,
+.home_page .bio_section .contact_details .email,
+.home_page .bio_section .contact_details .linked_in,
+.home_page .bio_section .contact_details .discord {
+  text-decoration: none;
+  text-shadow: 0px 0px 0px;
+  transition: text-shadow 0.5s linear;
+}
 .home_page .bio_section .contact_details .phone {
   color: #58ff53;
 }
@@ -355,25 +461,22 @@
   cursor: pointer;
 }
 .home_page .bio_section .contact_details .discord {
-  color: #535eff;
+  color: #896ffd;
   cursor: pointer;
 }
-.home_page .bio_section .contact_details .linked_in:hover {
-  color: #53acff;
-  text-shadow: #53acff 0px 0px 15px;
-}
+.home_page .bio_section .contact_details .linked_in:hover,
 .home_page .bio_section .contact_details .discord:hover {
-  color: #535eff;
-  text-shadow: #535eff 0px 0px 15px;
+  text-shadow: 0px 0px 15px;
+  transition: text-shadow 0.5s linear;
 }
-.home_page .projects_section {
+.home_page .section {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.home_page .projects_section .section_title {
+.home_page .section .section_title {
   font-size: 50px;
   font-family: monospace;
   color: rgba(255, 100, 100, 0.5607843137);

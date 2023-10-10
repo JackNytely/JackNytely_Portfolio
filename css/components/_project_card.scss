@@ -28,8 +28,8 @@
 		justify-content: center;
 		align-items: center;
 		position: absolute;
-		border: #ffffff solid 0.25vh;
-		border-radius: 1vh;
+		border: #ffffffe1 solid 0.25vh;
+		border-radius: 0.5vh;
 
 		transition: transform 0.2s linear, left 0.2s linear;
 		cursor: pointer;
@@ -38,7 +38,7 @@
 			width: 100%;
 			height: 100%;
 			overflow: hidden;
-			border-radius: 1vh;
+			border-radius: 0.5vh;
 
 			img {
 				width: 100%;
@@ -61,7 +61,9 @@
 	}
 
 	.code_card {
+		top: 0%;
 		left: -10%;
+		box-shadow: -5px 5px 20px #000000;
 
 		.background_image {
 			object-position: right;
@@ -73,7 +75,9 @@
 	}
 
 	.preview_card {
+		top: -1%;
 		left: 10%;
+		box-shadow: -5px 5px 20px #000000;
 
 		.card_title {
 			color: #2c64ff;
