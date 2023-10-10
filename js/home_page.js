@@ -22,14 +22,14 @@ const rawProjects = [
 
 //Setup the Raw Skills
 const rawSkills = [
-	["NodeJS", 5, "/assets/skills/NodeJS.png"],
-	["TypeScript", 5, "/assets/skills/TypeScript.png"],
-	["JavaScript", 5, "/assets/skills/JavaScript.png"],
-	["HTML", 4, "/assets/skills/HTML.png"],
-	["CSS", 4, "/assets/skills/CSS.png"],
-	["SCSS", 3, "/assets/skills/SCSS.png"],
-	["MySQL", 3, "/assets/skills/MySQL.png"],
-	["MongoDB", 3, "/assets/skills/MongoDB.png"],
+	["NodeJS", 5, "/assets/Skills/NodeJS.png"],
+	["TypeScript", 5, "/assets/Skills/TypeScript.png"],
+	["JavaScript", 5, "/assets/Skills/JavaScript.png"],
+	["HTML", 4, "/assets/Skills/HTML.png"],
+	["CSS", 4, "/assets/Skills/CSS.png"],
+	["SCSS", 3, "/assets/Skills/SCSS.png"],
+	["MySQL", 3, "/assets/Skills/MySQL.png"],
+	["MongoDB", 3, "/assets/Skills/MongoDB.png"],
 ];
 
 //Get the Required Elements
