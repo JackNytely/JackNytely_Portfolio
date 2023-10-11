@@ -1,0 +1,8 @@
+------------------------------------T A S K   2------------------------------------
+In this task, you are going to be creating a personal webpage. Make sure that this webpage acts as a resume and introduces you to the world effectively. Strike a balance in your content — this webpage should show more of your personality than a typical CV but it should still be professional. 
+
+Follow these steps:
+-------------------
+
+● On this page add any elements you would like to create a webpage that acts as an online CV. This is your personal webpage, so feel free to customise it to suit your needs but make sure that you include at least the following:
+    ○ Add links to any blog posts or articles that you have written.

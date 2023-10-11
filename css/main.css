@@ -253,6 +253,47 @@
   transition: opacity 0.4s linear 0.5s;
 }
 
+.personal_history {
+  height: 50%;
+  width: 75%;
+  overflow-y: scroll;
+}
+.personal_history .history_item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5%;
+}
+.personal_history .history_item .history_item_date {
+  color: #ff5656;
+  margin: 0;
+  font-family: Verdana;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: -2px 2px 5px #000000;
+}
+.personal_history .history_item .history_item_description {
+  width: 75%;
+  font-family: Verdana;
+  font-size: 18px;
+  margin-left: 5%;
+}
+
+.personal_history::-webkit-scrollbar {
+  width: 5px;
+}
+
+.personal_history::-webkit-scrollbar-track {
+  background: rgba(241, 241, 241, 0);
+}
+
+.personal_history::-webkit-scrollbar-thumb {
+  background: #ff5d5d;
+}
+
+.personal_history::-webkit-scrollbar-thumb:hover {
+  background: #d44848;
+}
+
 .content {
   width: 100vw;
   height: 100vh;

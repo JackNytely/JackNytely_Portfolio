@@ -1,0 +1,46 @@
+.personal_history {
+	height: 50%;
+	width: 75%;
+	overflow-y: scroll;
+
+	.history_item {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 5%;
+
+		.history_item_date {
+			color: #ff5656;
+			margin: 0;
+			font-family: Verdana;
+			font-size: 20px;
+			font-weight: bold;
+			text-shadow: -2px 2px 5px #000000;
+		}
+		.history_item_description {
+			width: 75%;
+			font-family: Verdana;
+			font-size: 18px;
+			margin-left: 5%;
+		}
+	}
+}
+
+//Scrollbar Width
+.personal_history::-webkit-scrollbar {
+	width: 5px;
+}
+
+//Scrollbar Track
+.personal_history::-webkit-scrollbar-track {
+	background: #f1f1f100;
+}
+
+//Scrollbar Handle
+.personal_history::-webkit-scrollbar-thumb {
+	background: #ff5d5d;
+}
+
+//Scrollbar Hover
+.personal_history::-webkit-scrollbar-thumb:hover {
+	background: #d44848;
+}
