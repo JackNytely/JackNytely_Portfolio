@@ -3,6 +3,7 @@
 	animation: pageLoad 1s linear 0s forwards;
 	display: flex;
 	flex-direction: column;
+	overflow: hidden;
 
 	.body_content {
 		width: 100vw;

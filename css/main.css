@@ -512,6 +512,7 @@
   animation: pageLoad 1s linear 0s forwards;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 .home_page .body_content {
   width: 100vw;

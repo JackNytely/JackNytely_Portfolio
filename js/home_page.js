@@ -12,8 +12,8 @@ import { Skill } from "./helpers/Skill.js";
 const rawProjects = [
 	[
 		"My Anime List",
-		"/assets/Code_Test.png",
-		"/assets/Preview_Test.png",
+		"../assets/Code_Test.png",
+		"../assets/Preview_Test.png",
 		null,
 		"https://github.com/HyperionDev-SL23060008761/MyAnimeList",
 		"https://MyAnimeList.JackNytely.com",
@@ -22,14 +22,14 @@ const rawProjects = [
 
 //Setup the Raw Skills
 const rawSkills = [
-	["NodeJS", 5, "/assets/Skills/NodeJS.png"],
-	["TypeScript", 5, "/assets/Skills/TypeScript.png"],
-	["JavaScript", 5, "/assets/Skills/JavaScript.png"],
-	["HTML", 4, "/assets/Skills/HTML.png"],
-	["CSS", 4, "/assets/Skills/CSS.png"],
-	["SCSS", 3, "/assets/Skills/SCSS.png"],
-	["MySQL", 3, "/assets/Skills/MySQL.png"],
-	["MongoDB", 3, "/assets/Skills/MongoDB.png"],
+	["NodeJS", 5, "../assets/Skills/NodeJS.png"],
+	["TypeScript", 5, "../assets/Skills/TypeScript.png"],
+	["JavaScript", 5, "../assets/Skills/JavaScript.png"],
+	["HTML", 4, "../assets/Skills/HTML.png"],
+	["CSS", 4, "../assets/Skills/CSS.png"],
+	["SCSS", 3, "../assets/Skills/SCSS.png"],
+	["MySQL", 3, "../assets/Skills/MySQL.png"],
+	["MongoDB", 3, "../assets/Skills/MongoDB.png"],
 ];
 
 //Get the Required Elements
